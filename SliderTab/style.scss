@@ -1,0 +1,140 @@
+$lemon-100: #13610d;
+$lemon-200: #50ab49;
+$lemon-300: #b6de18;
+
+$label-size: 80px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #222222;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .tabs {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+
+    input {
+      display: none;
+
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}):checked ~ .icon label:nth-child(#{$i}) {
+          opacity: 1;
+        }
+
+        &:nth-child(#{$i}):checked ~ .icon .indicator {
+          top: 25% * ($i - 1);
+        }
+
+        &:nth-child(#{$i}):checked ~ .content .content-container:nth-child(#{$i}) {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    .icon {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      & label {
+        width: $label-size;
+        height: $label-size;
+        font-size: 32px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+        z-index: 2;
+        transition-duration: 0.3s;
+      }
+
+      & .indicator {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $label-size;
+        height: $label-size;
+        background-color: $lemon-100;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        transition-duration: 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: -20px;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          border-bottom-right-radius: 30px;
+          box-shadow: 8px 8px 0 8px $lemon-100;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -20px;
+          width: 20px;
+          height: 20px;
+          background-color: transparent;
+          border-top-right-radius: 30px;
+          box-shadow: 8px -8px 0 8px $lemon-100;
+        }
+      }
+    }
+
+    .content {
+      width: 520px;
+      height: 400px;
+      border-radius: 20px;
+      background-image: linear-gradient(90deg, $lemon-100, $lemon-200, $lemon-300);
+      color: white;
+      font-family: "Microsoft YaHei UI", serif;
+      position: relative;
+
+      & .content-container {
+        position: absolute;
+        padding: 48px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s;
+
+        h2 {
+          font-size: 48px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 20px;
+
+          a {
+            color: #aaaaaa;
+            transition-duration: 0.3s;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

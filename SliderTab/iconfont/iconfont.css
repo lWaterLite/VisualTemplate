@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.woff2?t=1706502236032') format('woff2'),
+  url('iconfont.woff?t=1706502236032') format('woff'),
+  url('iconfont.ttf?t=1706502236032') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont", serif !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vt-user-fill:before {
+  content: "\e828";
+}
+
+.vt-like-fill:before {
+  content: "\e83b";
+}
+
+.vt-settings-fill:before {
+  content: "\e840";
+}
+
+.vt-home-fill:before {
+  content: "\e857";
+}
+
