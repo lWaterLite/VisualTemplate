@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #D1D5DB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: #111827;
+  border-radius: 12px;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+.root:hover {
+  width: 270px;
+}
+.root:hover span {
+  opacity: 1;
+}
+.root a {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  margin: 6px 12px;
+  border-radius: 6px;
+  transition-duration: 0.3s;
+  color: #A0A0AF;
+  position: relative;
+}
+.root a:hover {
+  background-color: #374151;
+  color: #ffffff;
+}
+.root a:first-child {
+  margin-top: 12px;
+}
+.root a:last-child {
+  margin-bottom: 12px;
+}
+.root a:nth-child(1)::before, .root a:nth-child(4)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #374151;
+  position: absolute;
+  bottom: -6px;
+}
+.root a i {
+  float: left;
+  font-size: 32px;
+  margin: 0 12px;
+}
+.root a span {
+  font: 500 20px "Microsoft YaHei UI";
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */

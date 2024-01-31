@@ -1,0 +1,93 @@
+$backgroundBrush: #111827;
+$segmentationBrush: #374151;
+$foregroundBrush: #A0A0AF;
+$hoverBackgroundBrush: #374151;
+$hoverForegroundBrush: #ffffff;
+
+$iconFontSize: 32px;
+$iconHorizontalMargin: 12px;
+$navigationWidth: 270px;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #D1D5DB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  width: calc($iconFontSize + 4 * $iconHorizontalMargin);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: $backgroundBrush;
+  border-radius: 12px;
+  transition-duration: 0.3s;
+  overflow: hidden;
+
+  &:hover {
+    width: $navigationWidth;
+
+    span {
+      opacity: 1;
+    }
+  }
+
+  a {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    margin: 6px $iconHorizontalMargin;
+    border-radius: 6px;
+    transition-duration: 0.3s;
+    color: $foregroundBrush;
+    position: relative;
+
+    &:hover {
+      background-color: $hoverBackgroundBrush;
+      color: $hoverForegroundBrush;
+    }
+
+    &:first-child {
+      margin-top: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 12px;
+    }
+
+    &:nth-child(1)::before,
+    &:nth-child(4)::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $segmentationBrush;
+      position: absolute;
+      bottom: -6px;
+    }
+
+    i {
+      float: left;
+      font-size: $iconFontSize;
+      margin: 0 $iconHorizontalMargin;
+    }
+
+    span {
+      font: 500 20px "Microsoft YaHei UI";
+      opacity: 0;
+      transition-duration: 0.3s;
+    }
+  }
+}

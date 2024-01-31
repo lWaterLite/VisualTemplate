@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.woff2?t=1706671204831') format('woff2'),
+       url('iconfont.woff?t=1706671204831') format('woff'),
+       url('iconfont.ttf?t=1706671204831') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont", serif !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vt-todo-fill:before {
+  content: "\e833";
+}
+
+.vt-manage-fill:before {
+  content: "\e834";
+}
+
+.vt-application-fill:before {
+  content: "\e84a";
+}
+
+.vt-email-fill:before {
+  content: "\e856";
+}
+
+.vt-search:before {
+  content: "\e6a8";
+}
+
+.vt-user-fill:before {
+  content: "\e828";
+}
+
+.vt-like-fill:before {
+  content: "\e83b";
+}
+
+.vt-settings-fill:before {
+  content: "\e840";
+}
+
+.vt-home-fill:before {
+  content: "\e857";
+}
+
