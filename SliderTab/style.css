@@ -81,6 +81,9 @@ body {
   z-index: 2;
   transition-duration: 0.3s;
 }
+.root .tabs .icon label i {
+  font-size: 32px;
+}
 .root .tabs .icon .indicator {
   position: absolute;
   left: 0;
