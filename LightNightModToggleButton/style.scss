@@ -1,0 +1,95 @@
+$toggleButtonHeight: 120px;
+$transitionDuration: 0.5s;
+
+$pageDarkBackgroundBrush: #2b2b2b;
+$pageLightBackgroundBrush: #f8f8f8;
+
+$toggleButtonDarkBackgroundBrush: #222222;
+$toggleButtonDarkRadioBrush-100: #444444;
+$toggleButtonDarkRadioBrush-200: #222222;
+
+$toggleButtonLightBackground: #ffffff;
+$toggleButtonLightRadioBrush-100: #eaeaea;
+$toggleButtonLightRadioBrush-200: #f9f9f9;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root {
+  label {
+    display: none;
+  }
+
+  .changer {
+    appearance: none;
+    height: $toggleButtonHeight;
+    width: 2 * $toggleButtonHeight;
+    background: $toggleButtonDarkBackgroundBrush;
+    border-radius: $toggleButtonHeight;
+    box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    cursor: pointer;
+    transition-duration: $transitionDuration;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: $toggleButtonHeight;
+      width: $toggleButtonHeight;
+      position: absolute;
+      background: linear-gradient(180deg, $toggleButtonDarkRadioBrush-100, $toggleButtonDarkRadioBrush-200);
+      top: 0;
+      left: 0;
+      border-radius: $toggleButtonHeight;
+      transform: scale(0.9) translateX(0);
+      transition-duration: $transitionDuration;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
+      inset 4px 4px rgba(255, 255, 255, 0.1),
+      inset -4px 4px rgba(255, 255, 255, 0.1);
+    }
+
+    &:after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $pageDarkBackgroundBrush;
+      z-index: -999;
+      transition-duration: $transitionDuration;
+    }
+
+    &:checked {
+      background: #ffffff;
+      box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+      inset 0 2px 8px rgba(0, 0, 0, 0.1),
+      inset 0 -4px 4px rgba(0, 0, 0, 0.05);
+
+      &:before {
+        left: $toggleButtonHeight;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
+        inset 4px 4px rgba(255, 255, 255, 0.9),
+        inset -4px 4px rgba(255, 255, 255, 0.9);
+        background: linear-gradient(180deg, $toggleButtonLightRadioBrush-100, $toggleButtonLightRadioBrush-200);
+      }
+
+      &:after {
+        background: $pageLightBackgroundBrush;
+      }
+    }
+
+  }
+}
