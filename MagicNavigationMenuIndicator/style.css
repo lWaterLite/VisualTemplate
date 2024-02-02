@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: 0;
+  font-family: "Microsoft YaHei UI", serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222327;
+}
+
+.root {
+  position: relative;
+  width: 398px;
+  height: 70px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.root ul {
+  display: flex;
+  width: 350px;
+  align-items: center;
+  position: relative;
+}
+.root ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.root ul li:nth-child(1).active ~ .indicator {
+  transform: translateX(0px);
+}
+.root ul li:nth-child(2).active ~ .indicator {
+  transform: translateX(70px);
+}
+.root ul li:nth-child(3).active ~ .indicator {
+  transform: translateX(140px);
+}
+.root ul li:nth-child(4).active ~ .indicator {
+  transform: translateX(210px);
+}
+.root ul li:nth-child(5).active ~ .indicator {
+  transform: translateX(280px);
+}
+.root ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+.root ul li a i {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 70px;
+  font-size: 32px;
+  color: #222327;
+  transition-duration: 0.5s;
+}
+.root ul li a span {
+  position: absolute;
+  color: #222327;
+  font-weight: 400;
+  font-size: 14px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.root ul li.active a i {
+  transform: translateY(-50%);
+}
+.root ul li.active a span {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.root ul .indicator {
+  position: absolute;
+  box-sizing: border-box;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background-color: #29fd53;
+  border-radius: 50%;
+  border: 6px solid #222327;
+  transition-duration: 0.5s;
+}
+.root ul .indicator:before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: -22px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-top-right-radius: 18px;
+  box-shadow: 5px -5px 0 0 #222327;
+}
+.root ul .indicator:after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  right: -22px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-top-left-radius: 18px;
+  box-shadow: -5px -5px 0 0 #222327;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  color: gray;
+}
+footer a {
+  color: gray;
+  text-decoration: gray solid underline;
+  transition-duration: 0.3s;
+}
+footer a:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
