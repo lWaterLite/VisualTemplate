@@ -1,16 +1,31 @@
 @font-face {
   font-family: "iconfont";
-  src: url('iconfont.woff2?t=1706671204831') format('woff2'),
-       url('iconfont.woff?t=1706671204831') format('woff'),
-       url('iconfont.ttf?t=1706671204831') format('truetype');
+  src: url('iconfont.woff2?t=1706925851951') format('woff2'),
+       url('iconfont.woff?t=1706925851951') format('woff'),
+       url('iconfont.ttf?t=1706925851951') format('truetype');
 }
 
 .iconfont {
   font-family: "iconfont", serif !important;
-  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.vt-telegram:before {
+  content: "\e731";
+}
+
+.vt-discord:before {
+  content: "\f18d";
+}
+
+.vt-github:before {
+  content: "\e6f6";
+}
+
+.vt-facebook:before {
+  content: "\e64e";
 }
 
 .vt-todo-fill:before {

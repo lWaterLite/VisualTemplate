@@ -1,0 +1,138 @@
+$foregroundBrush: #f8f8f8;
+$backgroundBrush: #232323;
+
+$facebookBrush: #1A77F2;
+$telegramBrush: #1E98DC;
+$githubBrush: #02040A;
+$discordBrush: #5765F2;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei UI", serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $backgroundBrush;
+}
+
+.root {
+  .wrapper {
+    list-style: none;
+    display: flex;
+
+    .icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      background: $foregroundBrush;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      transition-duration: 0.3s;
+      position: relative;
+
+      &:hover {
+        .tooltip {
+          top: -45px;
+          opacity: 1;
+        }
+      }
+
+      .tooltip {
+        position: absolute;
+        top: 0;
+        font-size: 18px;
+        background: $foregroundBrush;
+        color: $backgroundBrush;
+        padding: 5px 8px;
+        border-radius: 6px;
+        opacity: 0;
+        pointer-events: none;
+        transition-duration: 0.3s;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 8px;
+          width: 8px;
+          background: $foregroundBrush;
+          bottom: -3px;
+          left: 50%;
+          transform: translate(-50%) rotate(45deg);
+          transition-duration: 0.3s;
+        }
+      }
+
+      i {
+        color: $backgroundBrush;
+        font-size: 24px;
+      }
+    }
+
+    .facebook:hover {
+      background: $facebookBrush;
+      color: $foregroundBrush;
+
+      .tooltip, .tooltip:before {
+        background: $facebookBrush;
+        color: $foregroundBrush;
+      }
+
+      i {
+        color: $foregroundBrush;
+      }
+    }
+
+    .telegram:hover {
+      background: $telegramBrush;
+      color: $foregroundBrush;
+
+      .tooltip, .tooltip:before {
+        background: $telegramBrush;
+        color: $foregroundBrush;
+      }
+
+      i {
+        color: $foregroundBrush;
+      }
+    }
+
+    .github:hover {
+      background: $githubBrush;
+      color: $foregroundBrush;
+
+      .tooltip, .tooltip:before {
+        background: $githubBrush;
+        color: $foregroundBrush;
+      }
+
+      i {
+        color: $foregroundBrush;
+      }
+    }
+
+    .discord:hover {
+      background: $discordBrush;
+      color: $foregroundBrush;
+
+      .tooltip, .tooltip:before {
+        background: $discordBrush;
+        color: $foregroundBrush;
+      }
+
+      i {
+        color: $foregroundBrush;
+      }
+    }
+
+  }
+}

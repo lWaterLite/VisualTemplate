@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei UI", serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #232323;
+}
+
+.root .wrapper {
+  list-style: none;
+  display: flex;
+}
+.root .wrapper .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background: #f8f8f8;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  position: relative;
+}
+.root .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+}
+.root .wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  background: #f8f8f8;
+  color: #232323;
+  padding: 5px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.3s;
+}
+.root .wrapper .icon .tooltip:before {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background: #f8f8f8;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition-duration: 0.3s;
+}
+.root .wrapper .icon i {
+  color: #232323;
+  font-size: 24px;
+}
+.root .wrapper .facebook:hover {
+  background: #1A77F2;
+  color: #f8f8f8;
+}
+.root .wrapper .facebook:hover .tooltip, .root .wrapper .facebook:hover .tooltip:before {
+  background: #1A77F2;
+  color: #f8f8f8;
+}
+.root .wrapper .facebook:hover i {
+  color: #f8f8f8;
+}
+.root .wrapper .telegram:hover {
+  background: #1E98DC;
+  color: #f8f8f8;
+}
+.root .wrapper .telegram:hover .tooltip, .root .wrapper .telegram:hover .tooltip:before {
+  background: #1E98DC;
+  color: #f8f8f8;
+}
+.root .wrapper .telegram:hover i {
+  color: #f8f8f8;
+}
+.root .wrapper .github:hover {
+  background: #02040A;
+  color: #f8f8f8;
+}
+.root .wrapper .github:hover .tooltip, .root .wrapper .github:hover .tooltip:before {
+  background: #02040A;
+  color: #f8f8f8;
+}
+.root .wrapper .github:hover i {
+  color: #f8f8f8;
+}
+.root .wrapper .discord:hover {
+  background: #5765F2;
+  color: #f8f8f8;
+}
+.root .wrapper .discord:hover .tooltip, .root .wrapper .discord:hover .tooltip:before {
+  background: #5765F2;
+  color: #f8f8f8;
+}
+.root .wrapper .discord:hover i {
+  color: #f8f8f8;
+}
+
+/*# sourceMappingURL=style.css.map */
