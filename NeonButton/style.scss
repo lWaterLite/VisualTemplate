@@ -1,0 +1,39 @@
+$buttonBrush: #03e9f4;
+$backgroundBrush: #232323;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $backgroundBrush;
+}
+
+.root {
+  a {
+    text-decoration: none;
+    position: relative;
+    padding: 24px 32px;
+    color: $buttonBrush;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background: $buttonBrush;
+      color: $backgroundBrush;
+      box-shadow: 0 0 5px $buttonBrush,
+      0 0 25px $buttonBrush,
+      0 0 50px $buttonBrush,
+      0 0 250px $buttonBrush;
+      -webkit-box-reflect: below 1px -webkit-linear-gradient(transparent, $backgroundBrush);
+    }
+  }
+}
