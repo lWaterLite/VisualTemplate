@@ -1,15 +1,43 @@
 @font-face {
   font-family: "iconfont";
-  src: url('iconfont.woff2?t=1706925851951') format('woff2'),
-       url('iconfont.woff?t=1706925851951') format('woff'),
-       url('iconfont.ttf?t=1706925851951') format('truetype');
+  src: url('iconfont.woff2?t=1707102231861') format('woff2'),
+       url('iconfont.woff?t=1707102231861') format('woff'),
+       url('iconfont.ttf?t=1707102231861') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont", serif !important;
+  font-family: "iconfont", sans-serif !important;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.vt-catalog-fill:before {
+  content: "\e826";
+}
+
+.vt-add:before {
+  content: "\e835";
+}
+
+.vt-favorites-fill:before {
+  content: "\e839";
+}
+
+.vt-close:before {
+  content: "\e83a";
+}
+
+.vt-info-fill:before {
+  content: "\e83d";
+}
+
+.vt-help-fill:before {
+  content: "\e83e";
+}
+
+.vt-quick-fill:before {
+  content: "\e863";
 }
 
 .vt-telegram:before {
