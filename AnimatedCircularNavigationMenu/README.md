@@ -1,2 +1,2 @@
 ## Sample
-![Sample](sample.gif)
+![Sample](assets/sample.gif)

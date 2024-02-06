@@ -25,6 +25,7 @@ body {
     font-weight: bold;
     font-family: sans-serif;
     transition-duration: 0.5s;
+    border-radius: 12px;
 
     &:hover {
       background: $buttonBrush;
